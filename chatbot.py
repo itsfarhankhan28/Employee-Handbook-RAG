@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 from langchain_ollama import ChatOllama
 from langchain_ollama import OllamaEmbeddings
 from langchain_chroma import Chroma
